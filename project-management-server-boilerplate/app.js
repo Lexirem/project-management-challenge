@@ -32,6 +32,9 @@ const usersRouter = require("./routes/users");
 const projectsRouter = require("./routes/project-routes");
 const taskRouter = require("./routes/task-routes");
 
+// app.use('/api', require('./routes/task-routes'));
+
+
 const app = express();
 
 // view engine setup
@@ -45,7 +48,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // ADD CORS SETTINGS HERE TO ALLOW CROSS-ORIGIN INTERACTION:
