@@ -18,7 +18,7 @@ class AddProject extends Component {
         axios
           .post("http://localhost:4000/api/projects", { title, description })
           .then(() => {
-            // this.props.getData()  <--- dejamos esta linea comentada por ahora (tendrá sentido muy pronto ^^)
+            this.props.getData() 
             // 4to - volvemos a setear nuestros valores en el state a valor inicial
             this.setState({title: "", description: "" });
           })
