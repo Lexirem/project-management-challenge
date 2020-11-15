@@ -22,7 +22,7 @@ class TaskDetails extends Component {
     axios.get(`http://localhost:4000/ai/tasks/${params.taskId}`)  
       // 2.3 - 'then', con la respuesta, seteamos el valor de nuestro state con el objeto que recibimos como respuesta.
       .then( responseFromApi => {
-        const tehTask = responseFromApi.data;
+        const theTask = responseFromApi.data;
         this.setState(theTask);
       })
       // 3ro - en caso de que hubiese un error, lo atrapamos y mostramos por consola.
